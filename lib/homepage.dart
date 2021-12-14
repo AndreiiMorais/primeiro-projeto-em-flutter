@@ -32,11 +32,25 @@ class HomePageState extends State<HomePage> {
           //crossAxisAlignment: CrossAxisAlignment.end,
           // o cross comentado faz o alinhamento para os lados ou de tamanho
           children: [
-            Text(
-              'Contador: $counter',
-              style: TextStyle(fontSize: 40, color: Colors.black),
+            Text('Contador: $counter',
+                style: TextStyle(fontSize: 40, color: Colors.black)),
+            Container(
+              //esses containers so servem para dar um espaçamento entre as linhas
+              height: 50,
             ),
             CustomSwitch(),
+            Container(
+              height: 50,
+            ),
+            Row(
+              //row seriam as linhas horizontais.
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(width: 50, height: 50, color: Colors.black),
+                Container(width: 50, height: 50, color: Colors.red),
+                Container(width: 50, height: 50, color: Colors.purple)
+              ],
+            )
           ],
         ),
       ),
