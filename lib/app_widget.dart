@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_projeto/app_controller.dart';
+import 'package:primeiro_projeto/login_page.dart';
 
 import 'homepage.dart';
 
@@ -17,14 +18,11 @@ class AppWidget extends StatelessWidget {
               brightness: AppController.instance.isDarkTheme
                   ? Brightness.dark
                   : Brightness.light),
-<<<<<<< HEAD
+          initialRoute: '/',
           routes: {
-            '/':(context) => LoginPage(),
-            '/home':(context) => HomePage(),
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
           },
-=======
-          home: HomePage(),
->>>>>>> parent of e35da8a (criada a tela de login)
         ),
       );
 }
