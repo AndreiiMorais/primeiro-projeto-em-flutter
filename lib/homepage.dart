@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeiro_projeto/app_controller.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,29 +19,22 @@ class HomePageState extends State<HomePage> {
           child: Text('Home Page'),
         ),
       ),
-      
-      body: Container(
-        //cria um quadrado preto de tamanho definido abaixo
-        height: 200,
-        width: 200,
-        color: Colors.black,
-        child: Align(
-          //se tentar criar outro container nao funciona pois substitiu a ordem do container de cima
-          //para isso se cria o alignment que ele faz o alinhamento e o single render
-          //o center tambem faz o single render
-          alignment: Alignment.center,
-            child: Container(
-              height: 100,
-              width: 100,
-              color: Colors.red,
-            ),
-        ),
+
+      body: Align(
+        alignment: Alignment.topRight,
+        child: Switch(
+            value: AppController.instance.isDarkTheme,
+            onChanged: (value) {
+              AppController.instance.changeTheme();
+            }),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_box_outlined),
-        onPressed: () {setState(() {
-              counter++;
-            });},
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+        },
       ),
     );
   }
