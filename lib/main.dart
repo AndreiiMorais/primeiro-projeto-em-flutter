@@ -16,15 +16,11 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        //o center faz a centralização do texto.
-        child: Text(
-          title,
-          textDirection: TextDirection.ltr,
-          style: TextStyle(color: Colors.white, fontSize: 50.0),
-        ),
-      ),
+    return MaterialApp(
+      //material app serve pra dar uma cara de app no projeto. 
+      theme: ThemeData(primarySwatch: Colors.red),
+      home: Container(
+        child: const Center(child: Text ('Andrei')),
     );
   }
 }
