@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -24,6 +23,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.asset('assets/images/skull.png'),
+                //para declarar um asset, precisa ser referenciado la no pubspec.yaml
                 TextField(
                   onChanged: (text) {
                     email = text;
@@ -50,10 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     if (email == 'andrei.morais@outlook.com' &&
                         password == '123') {
-                      print('correto');
                       Navigator.of(context).pushReplacementNamed('/home');
-                    } else {
-                      print('login invalido');
                     }
                   },
                   child: const Text('Entrar'),
