@@ -18,12 +18,11 @@ class AppWidget extends StatelessWidget {
               brightness: AppController.instance.isDarkTheme
                   ? Brightness.dark
                   : Brightness.light),
-<<<<<<< HEAD
           initialRoute: '/',
-          home: LoginPage(),
-=======
-          home: HomePage(),
->>>>>>> parent of e35da8a (criada a tela de login)
+          routes: {
+            '/' : (context) => LoginPage(),
+            '/home' : (context) => HomePage(),
+          },
         ),
       );
 }
