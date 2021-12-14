@@ -18,18 +18,19 @@ class HomePageState extends State<HomePage> {
           child: Text('Home Page'),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add_box_outlined),
-        onPressed: () {setState(() {
-              counter++;
-            });},
-      ),
+      
       body: Center(
         child: GestureDetector(
           //detecta clicks
           child: Text('Contador $counter', style: TextStyle(fontSize: 50)),
           onTap: () {},
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add_box_outlined),
+        onPressed: () {setState(() {
+              counter++;
+            });},
       ),
     );
   }
