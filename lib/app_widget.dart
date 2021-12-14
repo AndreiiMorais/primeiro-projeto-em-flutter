@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:primeiro_projeto/app_controller.dart';
 import 'package:primeiro_projeto/login_page.dart';
@@ -20,10 +19,7 @@ class AppWidget extends StatelessWidget {
                   ? Brightness.dark
                   : Brightness.light),
           initialRoute: '/',
-          routes: {
-            '/': (context) => LoginPage(),
-            '/home': (context) => HomePage(),
-          },
+          home: LoginPage(),
         ),
       );
 }
