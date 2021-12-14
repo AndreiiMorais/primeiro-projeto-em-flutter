@@ -26,6 +26,7 @@ class AppWidget extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() {
     return HomePageState();
@@ -42,12 +43,13 @@ class HomePageState extends State<HomePage> {
             //detecta clicks
         child: Text('Contador $counter'),
         onTap: () {
-          //no click altera o stado chamando todo o construtor novamente.
+          //no click altera o estado chamando todo o construtor novamente.
           setState(() {
             counter++;
           });
         },
-      )),
+      ),
+      ),
     );
   }
 }
