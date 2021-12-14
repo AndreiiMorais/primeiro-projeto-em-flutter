@@ -26,7 +26,8 @@ class HomePageState extends State<HomePage> {
         color: Colors.black,
         child: Align(
           //se tentar criar outro container nao funciona pois substitiu a ordem do container de cima
-          //para isso se cria o alignment que ele faz o alinhamento e o multi render
+          //para isso se cria o alignment que ele faz o alinhamento e o single render
+          //o center tambem faz o single render
           alignment: Alignment.center,
             child: Container(
               height: 100,
