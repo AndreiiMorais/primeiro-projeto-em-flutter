@@ -8,6 +8,3 @@ main() {
   runApp(AppWidget());
   //dessa forma o runapp esta apenas chamando a outra classe
 }
-
-
-
