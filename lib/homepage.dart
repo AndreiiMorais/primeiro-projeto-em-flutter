@@ -26,11 +26,8 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         height: double.infinity,
         //a opçao double.infinity coloca o container no tamanho maximo disponivel
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          //faz o alinhamento principal no centro
-          //crossAxisAlignment: CrossAxisAlignment.end,
-          // o cross comentado faz o alinhamento para os lados ou de tamanho
+        child: ListView(
+          //o ListView transforma o em uma lista com scroll.. podendo ser alterado para scroll horizontal com o scrollDirection: Axis.horizontal
           children: [
             Text('Contador: $counter',
                 style: TextStyle(fontSize: 40, color: Colors.black)),
