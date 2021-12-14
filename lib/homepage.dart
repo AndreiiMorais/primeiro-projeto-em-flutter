@@ -19,11 +19,20 @@ class HomePageState extends State<HomePage> {
         ),
       ),
       
-      body: Center(
-        child: GestureDetector(
-          //detecta clicks
-          child: Text('Contador $counter', style: TextStyle(fontSize: 50)),
-          onTap: () {},
+      body: Container(
+        //cria um quadrado preto de tamanho definido abaixo
+        height: 200,
+        width: 200,
+        color: Colors.black,
+        child: Align(
+          //se tentar criar outro container nao funciona pois substitiu a ordem do container de cima
+          //para isso se cria o alignment que ele faz o alinhamento e o multi render
+          alignment: Alignment.center,
+            child: Container(
+              height: 100,
+              width: 100,
+              color: Colors.red,
+            ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
