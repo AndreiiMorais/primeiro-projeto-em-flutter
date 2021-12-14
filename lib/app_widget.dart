@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:primeiro_projeto/app_controller.dart';
 
 import 'homepage.dart';
+import 'login_page.dart';
 
 class AppWidget extends StatelessWidget {
   //stateless é um widget q nao se altera, nao tem animaçao, imutavel, sem estado
@@ -17,7 +18,7 @@ class AppWidget extends StatelessWidget {
               brightness: AppController.instance.isDarkTheme
                   ? Brightness.dark
                   : Brightness.light),
-          home: HomePage(),
+          home: LoginPage(),
         ),
       );
 }
