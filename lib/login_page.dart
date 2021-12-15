@@ -77,23 +77,25 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //o scaffold permite dar scroll naa tela para ver o botao quando o teclado aparece
-        body: Stack(
-      //o stack empilha todos os widgets q for colocado no children em ordem
-      children: [
-        SizedBox(
+      //o scaffold permite dar scroll naa tela para ver o botao quando o teclado aparece
+      body: Stack(
+        //o stack empilha todos os widgets q for colocado no children em ordem
+        children: [
+          SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
               'assets/images/background.png',
               fit: BoxFit.cover,
-            )),
-        Container(
-          //esse container foi somente para criar uma mascara mais escura
-          color: Colors.black.withOpacity(0.1),
-        ),
-        _body(),
-      ],
-    ));
+            ),
+          ),
+          Container(
+            //esse container foi somente para criar uma mascara mais escura
+            color: Colors.black.withOpacity(0.1),
+          ),
+          _body(),
+        ],
+      ),
+    );
   }
 }

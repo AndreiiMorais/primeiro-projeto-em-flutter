@@ -13,6 +13,39 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              //aqui da pra pensar em preencher automatico.
+              currentAccountPicture: ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                //clipOval tambem faz a mesma funçao do CilpRRect
+                child: Image.network(
+                    'https://media-exp1.licdn.com/dms/image/C4D03AQGDDyc8dfVHoQ/profile-displayphoto-shrink_800_800/0/1621388334861?e=1645056000&v=beta&t=BKB72G-0ZOl05aSWIG4DjjfWDWcuZeaTR_7Bp-LbJZk'),
+              ),
+              accountName: Text('Andrei'),
+              accountEmail: Text('andrei.morais@outlook.com'),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Logout'),
+              subtitle: Text('Deslogar do sistema'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.fireplace),
+              title: Text('Login no Tinder'),
+              subtitle: Text('Tela de login do tinder'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/tinder');
+              },
+            ),
+          ],
+        ),
+      ),
       //scaffold é um widget que tem toda a parte visual "meio pronta"
       appBar: AppBar(
         title: Text('Home Page'),
